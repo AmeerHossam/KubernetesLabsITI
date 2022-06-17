@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: replica-set-1
+  labels:
+    app: mybusy-box
+    type: os
+
+spec:
+  replicas: 5
+  template:
+    metadata:
+      name: mybusybox-pod
+      labels:
+        app: mybusybox
+        type: os
+
+    spec:
+      containers:
+        - name: busy-box-container
+          image: nginx
+          command: 
+          
+          - sleep 5
+  selector:
+    matchLabels:
+      type: os
