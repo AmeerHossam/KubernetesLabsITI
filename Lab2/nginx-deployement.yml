@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue
+  labels:
+    app: webServer1
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webServer1
+  
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: webServer1
+
+
+    spec:
+      containers:
+      - name : nginx1
+        image : nginx:latest
+      
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: color
+                operator: In
+                values:
+                - blue
+
+      
