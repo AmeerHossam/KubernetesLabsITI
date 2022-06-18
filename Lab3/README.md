@@ -244,7 +244,7 @@ Commercial support is available at
 </html>
 # 
 ```
-![Nginx](/home/amir/KubernetesLabs/KubernetesLabsITI/Lab3/Screenshot from 2022-06-18 14-28-14.png)
+![plot](/home/amir/KubernetesLabs/KubernetesLabsITI/Lab3/ng.png)
 
 12- How many static pods exist in this cluster in all namespaces?
 ```bash
