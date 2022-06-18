@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-test
+
+spec:
+  containers:
+  - name: nginx-test-container
+    image: nginx:alpine
