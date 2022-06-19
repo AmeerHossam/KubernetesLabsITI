@@ -368,6 +368,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: claim-log-1
 spec:
+  storageClassName: ""
   accessModes:
     - ReadWriteMany
   resources:
