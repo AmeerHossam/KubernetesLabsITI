@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: print-envars-greeting
+
+spec:
+  containers:
+  - name: print-envars-greeting-container
+    image: bash
+    command: ["echo"]
+    args: ["$(GREETING) $(COMPANY) $(GROUP)"]
+
+
+
+    env:
+    - name: GREETING
+      value: "Welcome to"
+
+    - name: COMPANY
+      value: "DevOps"
+
+    - name: GROUP
+      value: "Industries"
